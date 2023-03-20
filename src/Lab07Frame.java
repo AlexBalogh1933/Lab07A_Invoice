@@ -65,14 +65,18 @@ public class Lab07Frame extends JFrame
         priceTF3 = new JTextField();
         priceTF3.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 
-        orderText = new JTextArea(10,50);
+        orderText = new JTextArea(30,60);
+        orderText.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         orderScroll = new JScrollPane(orderText);
 
         orderButton = new JButton("Order");
+        orderButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
         orderButton.addActionListener(order);
         clearButton = new JButton("Clear");
+        clearButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
         clearButton.addActionListener(clear);
         quitButton = new JButton("Quit");
+        quitButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
         quitButton.addActionListener(quit);
 
         add(mainPanel);
@@ -143,6 +147,7 @@ public class Lab07Frame extends JFrame
             completeTotal = item1Total + item2Total + item3Total;
 
             orderList = String.format("============Invoice============\n"
+                            + "Item                Qty     Price     Total\n"
                             + "%s                %.0f     %.2f     %.2f\n"
                             + "%s                %.0f     %.2f     %.2f\n"
                             + "%s                %.0f     %.2f     %.2f\n"
